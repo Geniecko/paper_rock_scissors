@@ -1,0 +1,1 @@
+(()=>{var r={752:()=>{console.log("Działam")}},o={};function t(e){var s=o[e];if(void 0!==s)return s.exports;var a=o[e]={exports:{}};return r[e](a,a.exports,t),a.exports}(()=>{"use strict";t(752)})()})();
