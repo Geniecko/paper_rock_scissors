@@ -1,0 +1,69 @@
+.score-panel{
+  border: 3px solid $color-border;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 32px auto 48px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-up(sm){
+    padding: 24px;
+    margin: 48px auto 64px auto;
+  }
+
+  @include media-up(md){
+    max-width: 75%;
+  }
+
+  @include media-up(xl){
+    max-width: 70%;
+  }
+
+  &__header{
+    h1{
+      font-size: 2.4rem;
+
+      @include media-up(sm){
+       font-size: 3.2rem;
+      }
+    }
+    
+    span{
+      display: block;
+    }
+  }
+
+  &__score{
+    border-radius: 8px;
+    background-color: $color-main;
+    color: $color-score;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 32px;
+    text-align: center;
+
+    @include media-up(sm){
+      padding: 16px 48px;
+    }
+
+    span{
+      font-weight: 700;
+      font-size: 1.8rem;
+      display: block;
+      letter-spacing: 1px;
+    }
+
+    strong{
+      display: block;
+      font-size: 4.2rem;
+      font-weight: 700;
+      color: $color-page;
+
+      @include media-up(sm){
+        font-size: 5.6rem;
+      }
+    }
+  }
+}

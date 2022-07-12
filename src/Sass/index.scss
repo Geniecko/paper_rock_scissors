@@ -3,6 +3,6 @@
 @import './utilites/mixin';
 @import './utilites/global';
 
-img{
-  background-image: './Assets/Images/icon-paper.svg';
-}
+
+// App styles
+@import './app/score-panel';
