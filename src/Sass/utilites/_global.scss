@@ -9,6 +9,11 @@ body {
   color: $color-main;
   width: 100%;
   min-height: 100vh;
+  position: relative;
+
+  &.disable-scroll{
+    overflow: hidden;
+  }
 }
 
 .app-container {
@@ -22,5 +27,5 @@ body {
 }
 
 .hidden{
-  display: none;
+  display: none !important;
 }

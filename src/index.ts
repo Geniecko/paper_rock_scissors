@@ -1,2 +1,2 @@
 import './Sass/index.scss';
-import './app';
+import './TypeScript/app';
