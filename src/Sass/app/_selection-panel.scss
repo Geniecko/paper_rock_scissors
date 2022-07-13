@@ -14,16 +14,16 @@
     background-image: url('../../public/Assets/Images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     position: relative;
 
     @include media-up(sm){
-      width: 40%;
+      width: 30%;
     }
 
     @include media-up(md){
-      width: 30%;
+      width: 20%;
     }
   }
 
@@ -58,6 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 
   @include media-up(sm) {
     width: 125px;
@@ -71,14 +72,17 @@
 
   &--paper {
     background: linear-gradient($color-paper);
+    box-shadow: inset 0px -6px 0px 0px lighten(hsl(230, 89%, 62%), 10%);
   }
 
   &--rock {
     background: linear-gradient($color-rock);
+    box-shadow: inset 0px -6px 0px 0px lighten(hsl(349, 71%, 52%), 10%);
   }
 
   &--scissors {
     background: linear-gradient($color-scissors);
+    box-shadow: inset 0px -6px 0px 0px lighten(hsl(39, 89%, 49%), 10%);
   }
 
   img {
@@ -94,5 +98,6 @@
     align-items: center;
     border-radius: 50%;
     background-color: $color-main;
+    box-shadow: inset 0px 8px 0px 0px darken($color-main, 10%);
   }
 }
