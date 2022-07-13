@@ -21,8 +21,12 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        use: ["source-map-loader"],
-        enforce: "pre"
+        use: ['source-map-loader'],
+        enforce: 'pre',
+      },
+      {
+        test: /\.(jpg|png|svg|gif)$/,
+        type: 'asset/resource',
       },
     ],
   },
@@ -31,7 +35,7 @@ module.exports = {
       template: path(__dirname, '..', 'public', 'index.html'),
     }),
     new CopyPlugin({
-      patterns: [{ from:'public/Assets', to: 'Assets' }],
-    })
+      patterns: [{ from: 'public/Assets', to: 'Assets' }],
+    }),
   ],
 };

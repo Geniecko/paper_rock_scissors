@@ -1,0 +1,98 @@
+.selection-panel {
+  padding: 50px 0;
+
+  @include media-up(sm){
+    padding: 62.5px 0;
+  }
+  
+  @include media-up(lg){
+    padding: 75px 0;
+  }
+
+  &__background {
+    aspect-ratio: 313 / 278;
+    background-image: url('../../public/Assets/Images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+
+    @include media-up(sm){
+      width: 40%;
+    }
+
+    @include media-up(md){
+      width: 30%;
+    }
+  }
+
+  &__option {
+    position: absolute;
+    cursor: pointer;
+
+    &--paper {
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &--rock {
+      right: 0;
+      top: 0;
+      transform: translate(50%, -50%);
+    }
+
+    &--scissors {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+}
+
+.option {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-up(sm) {
+    width: 125px;
+    height: 125px;
+  }
+
+  @include media-up(lg) {
+    width: 150px;
+    height: 150px;
+  }
+
+  &--paper {
+    background: linear-gradient($color-paper);
+  }
+
+  &--rock {
+    background: linear-gradient($color-rock);
+  }
+
+  &--scissors {
+    background: linear-gradient($color-scissors);
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  &__background {
+    width: calc(100% - 25px);
+    height: calc(100% - 25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $color-main;
+  }
+}
