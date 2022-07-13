@@ -1,0 +1,63 @@
+.rules {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__button {
+    border-radius: 8px;
+    border: 2px solid $color-border;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    padding: 8px 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-border;
+    }
+  }
+}
+
+.rules-modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+
+  &--hidden{
+    display: none;
+  }
+
+  &--show{
+    display: flex;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 500px;
+    padding: 48px;
+    background-color: $color-score;
+    border-radius: 8px;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+  }
+}

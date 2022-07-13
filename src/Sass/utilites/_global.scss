@@ -1,4 +1,4 @@
-html{
+html {
   font-size: 62.5%;
 }
 
@@ -6,18 +6,17 @@ body {
   background: $color-page;
   font-family: $main-font, sans-serif;
   font-size: 1.6rem;
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: hidden;
   color: $color-main;
+  width: 100%;
+  min-height: 100vh;
 }
 
-.app-container{
+.app-container {
   max-width: $app-max-wdith;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 24px 16px;
 
-  @include media-up(md){
-    padding: 0 32px;
+  @include media-up(md) {
+    padding: 42px 32px;
   }
 }

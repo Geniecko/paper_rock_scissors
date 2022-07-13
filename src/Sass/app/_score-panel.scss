@@ -2,14 +2,14 @@
   border: 3px solid $color-border;
   border-radius: 8px;
   padding: 16px;
-  margin: 32px auto 48px auto;
+  margin: 0 auto 48px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @include media-up(sm){
     padding: 24px;
-    margin: 48px auto 64px auto;
+    margin: 0 auto 64px auto;
   }
 
   @include media-up(md){
