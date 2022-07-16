@@ -1,9 +1,7 @@
-import { toggleModal } from './modal';
+import { showGamePanel } from './toggleGamePanels';
 
-const modalButton : HTMLButtonElement | null = document.querySelector('#modalButton');
+const init = (): void => {
+  showGamePanel();
+};
 
-const init = (): void =>  {
-  modalButton && modalButton.addEventListener('click', () => toggleModal(modalButton));
-}
-  
 init();

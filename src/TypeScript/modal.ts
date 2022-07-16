@@ -1,15 +1,17 @@
+const modalButton : HTMLButtonElement | null = document.querySelector('#modalButton');
+
 const closeModal = (modal: HTMLElement): void => {
   modal.classList.add('hidden');
-  document.body.classList.remove('disable-scroll');
+  // document.body.classList.remove('disable-scroll');
 };
 
 const showModal = (modal: HTMLElement): void => {
   modal.classList.remove('hidden');
-  document.body.classList.add('disable-scroll');
+  // document.body.classList.add('disable-scroll');
 };
 
-export const toggleModal = (element: HTMLElement): void => {
-  const target: String | undefined = element.dataset.target;
+const toggleModal = (element: HTMLElement): void => {
+  const target: string | undefined = element.dataset.target;
   const modal: HTMLElement | null = document.getElementById(`${target}`);
 
   const closeButton: HTMLElement | null =
@@ -27,3 +29,5 @@ export const toggleModal = (element: HTMLElement): void => {
     }
   }
 };
+
+modalButton && modalButton.addEventListener('click', () => toggleModal(modalButton));
