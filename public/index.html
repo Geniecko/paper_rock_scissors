@@ -14,7 +14,7 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body class="noselect">
   <div class="app-container">
     <div class="score-panel">
       <header class="score-panel__header">
@@ -24,24 +24,30 @@
           <span>SCISSORS</span>
         </h1>
       </header>
-      <div class="score-panel__score">
-        <span>SCORE</span>
-        <strong id="score">12</strong>
+      <div class="score-panel__score-wrapper">
+        <div class="score-panel__score">
+          <span>PLAYER SCORE:</span>
+          <strong id="playerScore">0</strong>
+        </div>
+        <div class="score-panel__score">
+          <span>AI SCORE:</span>
+          <strong id="aiScore">0</strong>
+        </div>
       </div>
     </div>
     <section class="selection-panel">
       <div class="selection-panel__background">
-        <button class="selection-panel__option selection-panel__option--paper option option--paper">
+        <button data-option="paper" class="selection-panel__option selection-panel__option--paper option option--paper">
           <div class="option__background">
             <img src="./Assets/Images/icon-paper.svg" alt="paper">
           </div>
         </button>
-        <button class="selection-panel__option selection-panel__option--rock option option--rock">
+        <button data-option="rock" class="selection-panel__option selection-panel__option--rock option option--rock">
           <div class="option__background">
             <img src="./Assets/Images/icon-rock.svg" alt="rock">
           </div>
         </button>
-        <button class="selection-panel__option selection-panel__option--scissors option option--scissors">
+        <button data-option="scissors" class="selection-panel__option selection-panel__option--scissors option option--scissors">
           <div class="option__background">
             <img src="./Assets/Images/icon-scissors.svg" alt="scissors">
           </div>
@@ -52,21 +58,21 @@
       <div class="results-panel__grid-wrapper">
         <div class="results-panel__choice">
           <span class="results-panel__title">YOU PICKED</span>
-          <div class="option option--paper">
+          <div id="playerSelectionWrapper" class="option">
             <div class="option__background">
-              <img src="./Assets/Images/icon-paper.svg" alt="paper">
+              <img id="playerSelection" src="./Assets/Images/icon-paper.svg" alt="paper">
             </div>
           </div>
         </div>
         <div class="results-panel__result">
           <span id="result">YOU WIN</span>
-          <button class="results-panel__button">PLAY AGAIN</button>
+          <button id="playAgainButton" class="results-panel__button">PLAY AGAIN</button>
         </div>
         <div class="results-panel__choice">
           <span class="results-panel__title">THE AI PICKED</span>
-          <div class="option option--paper">
+          <div id="aiSelectionWrapper" class="option">
             <div class="option__background">
-              <img src="./Assets/Images/icon-paper.svg" alt="paper">
+              <img id="aiSelection" src="./Assets/Images/icon-paper.svg" alt="paper">
             </div>
           </div>
         </div>

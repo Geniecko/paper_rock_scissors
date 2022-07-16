@@ -11,21 +11,28 @@ body {
   min-height: 100vh;
   position: relative;
 
-  &.disable-scroll{
+  &.disable-scroll {
     overflow: hidden;
+  }
+
+  &.noselect {
+    user-select: none;
   }
 }
 
 .app-container {
+  min-height: 100vh;
   max-width: $app-max-wdith;
   margin: 0 auto;
   padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
 
   @include media-up(md) {
     padding: 42px 32px;
   }
 }
 
-.hidden{
+.hidden {
   display: none !important;
 }
