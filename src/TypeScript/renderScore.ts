@@ -1,4 +1,4 @@
-import { state } from "./state";
+import { state } from './state';
 
 export const renderScore = () => {
   const playerScore: HTMLElement | null = document.getElementById('playerScore');

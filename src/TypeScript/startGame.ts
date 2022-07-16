@@ -1,5 +1,5 @@
 import { state } from "./state";
-import { options, beatsOption } from "./helpers";
+import { options, beatsOption, playerLSKEy, aiLSKEy } from "./helpers";
 import { renderScore } from "./renderScore";
 import { showResultPanel, hideGamePanel } from "./toggleGamePanels";
 
@@ -24,11 +24,11 @@ const selectWinner = (): void => {
     winner = 'DRAW';
   }else if (beatsOption[state.playerChoice as keyof typeof beatsOption].includes(state.aiChoice)){
     state.playerScore += 1;
-
+    localStorage.setItem(playerLSKEy, state.playerScore.toString());
     winner = 'PLAYER WIN';
   } else{
     state.aiScore += 1;
-
+    localStorage.setItem(aiLSKEy, state.aiScore.toString());
     winner = 'AI WIN';
   }
 

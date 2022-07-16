@@ -20,3 +20,6 @@ export const beatsOption: BeatsOption = {
 export const options: string[] = ['paper', 'rock', 'scissors'];
 
 export const pathToAssets: string = './Assets/Images/';
+
+export const playerLSKEy = 'playerLSKey';
+export const aiLSKEy = 'aiLSKey';
