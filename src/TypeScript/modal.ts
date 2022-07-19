@@ -2,20 +2,17 @@ const modalButton : HTMLButtonElement | null = document.querySelector('#modalBut
 
 const closeModal = (modal: HTMLElement): void => {
   modal.classList.add('hidden');
-  // document.body.classList.remove('disable-scroll');
 };
 
 const showModal = (modal: HTMLElement): void => {
   modal.classList.remove('hidden');
-  // document.body.classList.add('disable-scroll');
 };
 
 const toggleModal = (element: HTMLElement): void => {
   const target: string | undefined = element.dataset.target;
-  const modal: HTMLElement | null = document.getElementById(`${target}`);
+  const modal = <HTMLElement>document.getElementById(`${target}`);
 
-  const closeButton: HTMLElement | null =
-    document.getElementById('closeModalButton');
+  const closeButton = <HTMLElement>document.getElementById('closeModalButton');
 
   if (target && modal) {
     if (modal.classList.contains('hidden')) {

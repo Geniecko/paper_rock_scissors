@@ -4,13 +4,13 @@ import { pathToAssets } from "./helpers";
 import { state } from "./state";
 
 export const showResultPanel = (winner: string): void => {
-  const resultPanel: HTMLElement | null = document.querySelector('.results-panel');
-  const playAgainButton: HTMLElement | null = document.getElementById('playAgainButton');
-  const result: HTMLElement | null = document.getElementById('result');
-  const aiSelectionWrapper: HTMLElement | null = document.getElementById('aiSelectionWrapper'); 
-  const aiSelection:  HTMLElement | null = document.getElementById('aiSelection'); 
-  const playerSelectionWrapper: HTMLElement | null = document.getElementById('playerSelectionWrapper'); 
-  const playerSelection:  HTMLElement | null = document.getElementById('playerSelection'); 
+  const resultPanel = <HTMLElement>document.querySelector('.results-panel');
+  const playAgainButton = <HTMLButtonElement>document.getElementById('playAgainButton');
+  const result = <HTMLElement>document.getElementById('result');
+  const aiSelectionWrapper = <HTMLElement>document.getElementById('aiSelectionWrapper'); 
+  const aiSelection = <HTMLElement>document.getElementById('aiSelection'); 
+  const playerSelectionWrapper = <HTMLElement>document.getElementById('playerSelectionWrapper'); 
+  const playerSelection = <HTMLElement>document.getElementById('playerSelection'); 
 
   resultPanel?.classList.remove('hidden');
   if(result && aiSelection && playerSelection && playerSelectionWrapper && aiSelectionWrapper){
@@ -28,15 +28,15 @@ export const showResultPanel = (winner: string): void => {
 }
 
 export const hideResultPanel = (): void => {
-  const resultPanel: HTMLElement | null = document.querySelector('.results-panel');
-  const playAgainButton: HTMLElement | null = document.getElementById('playAgainButton');
+  const resultPanel = <HTMLElement>document.querySelector('.results-panel');
+  const playAgainButton = <HTMLElement>document.getElementById('playAgainButton');
 
   playAgainButton?.removeEventListener('click', playAgain)
   resultPanel?.classList.add('hidden');
 }
 
 export const showGamePanel = ():void => {
-  const selectionPanel: HTMLElement | null = document.querySelector('.selection-panel');
+  const selectionPanel = <HTMLElement>document.querySelector('.selection-panel');
 
   if(selectionPanel){
     selectionPanel.classList.remove('hidden');
@@ -46,7 +46,7 @@ export const showGamePanel = ():void => {
 }
 
 export const hideGamePanel = ():void => {
-  const selectionPanel: HTMLElement | null = document.querySelector('.selection-panel');
+  const selectionPanel = <HTMLElement>document.querySelector('.selection-panel');
 
   if(selectionPanel){
     selectionPanel.classList.add('hidden');
