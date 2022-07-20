@@ -1,7 +1,9 @@
-import { AppState, playerLSKEy, aiLSKEy } from './helpers';
+import { AppState, LocalStorageKey } from './helpers';
 
-const loadPlayerScore: string | null = localStorage.getItem(playerLSKEy);
-const loadAiScore: string | null = localStorage.getItem(aiLSKEy);
+type LocalStorageScores = string | null;
+
+const loadPlayerScore: LocalStorageScores = localStorage.getItem(LocalStorageKey.player);
+const loadAiScore: LocalStorageScores = localStorage.getItem(LocalStorageKey.ai);
 
 export let state: AppState = {
   playerScore: loadPlayerScore ? Number(loadPlayerScore): 0,

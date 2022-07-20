@@ -1,6 +1,6 @@
 import { playAgain } from "./playAgain";
 import { setListeningToOptions, removeListeningToOptions } from "./toggleListeningToOptios";
-import { pathToAssets } from "./helpers";
+import { AssetsPath} from "./helpers";
 import { state } from "./state";
 
 export const showResultPanel = (winner: string): void => {
@@ -15,11 +15,11 @@ export const showResultPanel = (winner: string): void => {
   resultPanel?.classList.remove('hidden');
   if(result && aiSelection && playerSelection && playerSelectionWrapper && aiSelectionWrapper){
     result.textContent = winner;
-    aiSelection.setAttribute('src', `${pathToAssets}icon-${state.aiChoice}.svg`);
+    aiSelection.setAttribute('src', `${AssetsPath.assets}icon-${state.aiChoice}.svg`);
     aiSelection.setAttribute('alt', state.aiChoice);
     aiSelectionWrapper.className = '';
     aiSelectionWrapper.className = `option option--${state.aiChoice}`;
-    playerSelection.setAttribute('src', `${pathToAssets}icon-${state.playerChoice}.svg`);
+    playerSelection.setAttribute('src', `${AssetsPath.assets}icon-${state.playerChoice}.svg`);
     playerSelection.setAttribute('alt', state.playerChoice);
     playerSelectionWrapper.className = '';
     playerSelectionWrapper.className = `option option--${state.playerChoice}`;

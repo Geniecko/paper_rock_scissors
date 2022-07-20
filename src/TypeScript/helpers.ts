@@ -19,7 +19,11 @@ export const beatsOption: BeatsOption = {
 
 export const options: string[] = ['paper', 'rock', 'scissors'];
 
-export const pathToAssets: string = './Assets/Images/';
+export enum AssetsPath {
+  assets = './Assets/Images/'
+}
 
-export const playerLSKEy = 'playerLSKey';
-export const aiLSKEy = 'aiLSKey';
+export enum LocalStorageKey {
+  player = 'playerLSKey',
+  ai = 'aiLSKey'
+}
