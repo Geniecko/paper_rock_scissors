@@ -1,9 +1,9 @@
 import { playAgain } from "./playAgain";
 import { setListeningToOptions, removeListeningToOptions } from "./toggleListeningToOptios";
-import { AssetsPath} from "./helpers";
+import { AssetsPath, WinnerOptions} from "./helpers";
 import { state } from "./state";
 
-export const showResultPanel = (winner: string): void => {
+export const showResultPanel = (winner: WinnerOptions) => {
   const resultPanel = <HTMLElement>document.querySelector('.results-panel');
   const playAgainButton = <HTMLButtonElement>document.getElementById('playAgainButton');
   const result = <HTMLElement>document.getElementById('result');
@@ -27,7 +27,7 @@ export const showResultPanel = (winner: string): void => {
   playAgainButton?.addEventListener('click', playAgain)  
 }
 
-export const hideResultPanel = (): void => {
+export const hideResultPanel = () => {
   const resultPanel = <HTMLElement>document.querySelector('.results-panel');
   const playAgainButton = <HTMLElement>document.getElementById('playAgainButton');
 
@@ -35,7 +35,7 @@ export const hideResultPanel = (): void => {
   resultPanel?.classList.add('hidden');
 }
 
-export const showGamePanel = ():void => {
+export const showGamePanel = () => {
   const selectionPanel = <HTMLElement>document.querySelector('.selection-panel');
 
   if(selectionPanel){
@@ -45,7 +45,7 @@ export const showGamePanel = ():void => {
   setListeningToOptions();
 }
 
-export const hideGamePanel = ():void => {
+export const hideGamePanel = () => {
   const selectionPanel = <HTMLElement>document.querySelector('.selection-panel');
 
   if(selectionPanel){

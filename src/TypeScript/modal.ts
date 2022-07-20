@@ -1,18 +1,20 @@
-const modalButton : HTMLButtonElement | null = document.querySelector('#modalButton');
+const modalButton = <HTMLButtonElement>document.querySelector('#modalButton');
 
-const closeModal = (modal: HTMLElement): void => {
+const closeModal = (modal: HTMLElement) => {
   modal.classList.add('hidden');
 };
 
-const showModal = (modal: HTMLElement): void => {
+const showModal = (modal: HTMLElement) => {
   modal.classList.remove('hidden');
 };
 
-const toggleModal = (element: HTMLElement): void => {
-  const target: string | undefined = element.dataset.target;
+const toggleModal = (element: HTMLElement) => {
+  const target = element.dataset.target;
   const modal = <HTMLElement>document.getElementById(`${target}`);
 
-  const closeButton = <HTMLElement>document.getElementById('closeModalButton');
+  const closeButton = <HTMLButtonElement>(
+    document.getElementById('closeModalButton')
+  );
 
   if (target && modal) {
     if (modal.classList.contains('hidden')) {
@@ -27,4 +29,5 @@ const toggleModal = (element: HTMLElement): void => {
   }
 };
 
-modalButton && modalButton.addEventListener('click', () => toggleModal(modalButton));
+modalButton &&
+  modalButton.addEventListener('click', () => toggleModal(modalButton));

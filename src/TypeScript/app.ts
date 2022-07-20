@@ -1,7 +1,7 @@
 import { renderScore } from './renderScore';
 import { showGamePanel } from './toggleGamePanels';
 
-const init = (): void => {
+const init = () => {
   showGamePanel();
   renderScore();
 };

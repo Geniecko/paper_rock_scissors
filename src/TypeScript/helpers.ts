@@ -1,3 +1,5 @@
+export type WinnerOptions = 'DRAW' | 'PLAYER WIN' | 'AI WIN';
+
 export interface BeatsOption {
   paper: string;
   rock: string;
@@ -17,7 +19,7 @@ export const beatsOption: BeatsOption = {
   scissors: 'paper'
 }
 
-export const options: string[] = ['paper', 'rock', 'scissors'];
+export const options = ['paper', 'rock', 'scissors'];
 
 export enum AssetsPath {
   assets = './Assets/Images/'

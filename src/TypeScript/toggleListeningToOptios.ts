@@ -1,6 +1,6 @@
 import { startGame } from "./startGame";
 
-export const setListeningToOptions = (): void => {
+export const setListeningToOptions = ()=> {
   const selectionOptions = document.querySelectorAll<HTMLButtonElement>(
     '.selection-panel__option'
   );
@@ -13,7 +13,7 @@ export const setListeningToOptions = (): void => {
   });
 };
 
-export const removeListeningToOptions = (): void => {
+export const removeListeningToOptions = () => {
   const selectionOptions = document.querySelectorAll<HTMLButtonElement>(
     '.selection-panel__option'
   );

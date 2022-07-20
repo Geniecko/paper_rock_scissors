@@ -1,6 +1,6 @@
 import { hideResultPanel, showGamePanel } from "./toggleGamePanels"
 
-export const playAgain = ():void => {
+export const playAgain = () => {
   hideResultPanel();
   showGamePanel();
 }

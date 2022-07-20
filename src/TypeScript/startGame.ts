@@ -1,15 +1,15 @@
 import { state } from "./state";
-import { options, beatsOption, LocalStorageKey } from "./helpers";
+import { options, beatsOption, LocalStorageKey, WinnerOptions } from "./helpers";
 import { renderScore } from "./renderScore";
 import { showResultPanel, hideGamePanel } from "./toggleGamePanels";
 
-const setAiChoice = (): void => {
+const setAiChoice = () => {
   const randomIndex = Math.floor(Math.random() * options.length);
 
   state.aiChoice = options[randomIndex];
 };
 
-function setPlayerChoice (target: HTMLButtonElement): void {
+function setPlayerChoice (target: HTMLButtonElement)  {
   if(target.dataset.option !== undefined){
     state.playerChoice = target.dataset.option;
   } else {
@@ -17,8 +17,8 @@ function setPlayerChoice (target: HTMLButtonElement): void {
   }
 };
 
-const selectWinner = (): void => {
-  let winner: string;
+const selectWinner = () => {
+  let winner: WinnerOptions;
 
   if(state.playerChoice === state.aiChoice){
     winner = 'DRAW';
@@ -37,7 +37,7 @@ const selectWinner = (): void => {
   renderScore();
 }
 
-export function startGame(this: HTMLButtonElement): void {
+export function startGame(this: HTMLButtonElement) {
   setAiChoice();
   setPlayerChoice(this);
   selectWinner();
